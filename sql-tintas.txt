@@ -1,0 +1,41 @@
+CREATE TABLE CIN(
+	Id Int NOT NULL,
+	Cor Varchar(255),
+	TipodeTinta Varchar(255) NOT NULL,
+	PreçoPorLitro Int,
+	OndeUsar Varchar(255) NOT NULL,
+	TempodeSecagemHoras Int NOT NULL,
+	Acabamento Varchar(255)
+	)
+
+INSERT INTO CONFlDENCIAL.dbo.CIN (Id, Cor, TipodeTinta, PreçoPorLitro, OndeUsar, TempodeSecagemHoras, Acabamento)
+VALUES (1, 'Diversas', 'Acetinada', 26.54, 'Paredes/Tetos', '4-6 horas', 'Acetinado e liso')
+
+
+INSERT INTO CONFlDENCIAL.dbo.CIN(Id, Cor, TipodeTinta, PreçoPorLitro, OndeUsar, TempodeSecagemHoras, Acabamento)
+VALUES (1, 'Branco', 'Acetinada', 24.13, 'Parede', 6, 'Acetinado ou liso'),
+	   (2, 'Branco', 'Cináqua', 13.75, 'Parede', 4, 'Mate total ou liso'),
+	   (3, 'Preto',  'Efeito Ardósia', 18.81, 'Parede', 4, 'Mate total ou liso'),
+	   (4, 'Branco', 'Aquosa extra-mate', 10.4, 'Teto', 4, 'Extra mate ou liso'),
+	   (5, 'Branco', 'Aquosa mate', 18.59, 'Parede', 4, 'Mate ou liso'),
+	   (6, 'Branco', 'Premium mate', 24.13, 'Parede', 4, 'Mate ou liso'),
+	   (7, 'Branco', 'Aquosa acetinada', 18.59, 'Parede', 6, 'Acetinado ou liso'),
+	   (8, 'Branco', 'Verniz acrílico', 27.31, 'Parede', 2, 'Semi-mate'),
+	   (9, 'Branco', 'Esmalte acrílico', 20.23, 'Parede', 6, 'Brilhante ou liso'),
+	   (10, 'Branco', 'Aquosa extra-mate', 18.59, 'Parede', 4, 'Mate total ou liso'),
+	   (101, 'Branco', 'Esmalte acrílico satinado', 27.29, 'Madeiras', 6, 'Acetinado ou liso'),
+	   (102, 'Diversas', 'Lasur acetinado', 20.52, 'Madeiras', 10, 'Acetinado'),
+	   (103, 'Branco', 'Esmalte sintético fosco', 24.44, 'Madeiras', 24, 'Mate ou liso'),
+	   (104, 'Branco', 'Esmalte sintético brilhante', 24.44, 'Madeiras', 24, 'Brilhante ou liso'),
+	   (105, 'Branco', 'Esmalte sintético satinado', 24.44, 'Madeiras', 24, 'Acetinado ou liso'),
+	   (201, 'Branco', 'Esmalte acrílico mate', 20.23, 'Metais', 6, 'Semi-mate ou liso'),
+	   (202, 'Branco', 'Esmalte acrílico acetinado', 20.23, 'Metais', 6, 'Acetinado ou liso'),
+	   (203, 'Branco', 'Esmalte liso', 26.28, 'Metais', 24, 'Brilhante'),
+	   (204, 'Diversas', 'Esmalte forjado', 24.37, 'Metais', 24, 'Tipo ferro forjado'),
+	   (205, 'Branco',	'Esmalte acrílico brilhante', 20.23, 'Metais', 6, 'Brilhante ou liso')
+
+UPDATE CONFlDENCIAL.dbo.CIN
+SET 
+    Acabamento = null
+WHERE
+    Id = 5;

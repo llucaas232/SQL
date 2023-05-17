@@ -1,0 +1,35 @@
+CREATE TABLE Carro(
+	Id Int NOT NULL,
+	Modelo Varchar(255) NOT NULL,
+	PreçoEmEuros Int,
+	Litros_Ou_kWh_Por100km Int NOT NULL,
+	EmissõesCO2_GporKm Int, 
+	TipodeCombustível Varchar (255) NOT NULL, 
+	Ano Int,
+	Tração Varchar (255), 
+	NºdePortas Int
+	)
+
+INSERT INTO CONFIDENCIALE.dbo.Carro (Id, Modelo, PreçoEmEuros, Litros_Ou_kWh_Por100km, EmissõesCO2_GporKm, TipodeCombustível, Ano, Tração, NºdePortas)
+VALUES (1, 'Formentor 2.0 TDI S&S P22', 39432.48, 4.8, 125, 'Gasóleo', 2023, 'Dianteira', 5),
+	   (2, 'CUPRA Leon 5 Portas 1.5 TSI 150cv', 37447.22, 6.1, 138, 'Gasolina', 2023, 'Dianteira', 5),
+	   (3, 'Formentor 1.5 TSI S&S', 38290.65, 6.4, 145, 'Gasolina', 2023, 'Dianteira', 5),
+	   (4, 'CUPRA Leon 5 Portas 1.5 eTSI 150cv DSG', 39071.51, 5.9, 135, 'Gasolina Mild-Hybrid', 2023, 'Dianteira', 5),
+	   (5, 'Formentor 1.5 TSI S&S P20', 39334.87, 6.4, 145, 'Gasolina', 2023, 'Dianteira', 5),
+	   (6, 'Formentor 1.5 TSI S&S P21', 39622.85, 6.5, 147, 'Gasolina', 2023, 'Dianteira', 5),
+	   (7, 'Born 58kWh - 204cv', 46148.53, 15.4, NULL, 'Eletricidade', 2023, 'Dianteira', 5),
+	   (8, 'Formentor 2.0 TSI DSG 4DRVIVE S&S VZ', 58248.62, 8.6, 193, 'Gasolina', 2023, '4x4', 5),
+	   (9, 'CUPRA Leon Sportstourer 1.5 eTSI 150cv', 43078.02, 6.2, 141, 'Gasolina Mild-Hybrid', 2023, 'Dianteira', 5),
+	   (10, 'Formentor 1.4 e-HYBRID DSG S&S', 48565.23, 1.2, 7, 'Híbrido', 2023, 'Dianteira', 5),
+	   (21, 'Formentor 2.0 TSI DSG 4DRVIVE S&S VZ', 62277.94, 8.5, 193, 'Gasolina', 2023, '4x4', 5),
+	   (22, 'Formentor 2.5 TSI DSG 4DRVIVE S&S VZ', 86480.35, 10.2, 230, 'Gasolina', 2023, '4x4', 5),
+	   (23, 'CUPRA Leon 5 Portas 1.5 eTSI 150cv DSG', 40636.57, 6.0, 136, 'Gasolina Mild-Hybrid', 2023, 'Dianteira', 5),
+	   (24, 'Formentor 1.5 TSI DSG S&S P22', 40415.72, 6.7, 151, 'Gasolina', 2023, 'Dianteira', 5),
+	   (25, 'Formentor 2.0 TDI S&S', 41638.55, 4.9, 129, 'Gasóleo', 2023, 'Dianteira', 5)
+
+
+UPDATE Carro
+SET 
+    Tração = null
+WHERE
+    Id = 3;
